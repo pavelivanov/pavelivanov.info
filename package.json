@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "clean": "rimraf build",
-    "html": "jade ./src -o ./build -w",
-    "stylus": "stylus ./src/style.styl -o ./build/style.css -w -r",
+    "html": "jade ./src -o ./build -P -w",
+    "stylus": "stylus ./src/style.styl -o ./build/style.css -w",
     "build": "npm run clean && cross-env DEBUG=app:* NODE_ENV=development CONFIG=development node ./bin/compile"
   },
   "dependencies": {},
