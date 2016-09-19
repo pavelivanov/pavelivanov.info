@@ -1,6 +1,17 @@
+-
+  items = [
+    { title: 'Redbox [Redux tool Box]', slug: 'redbox', desc: 'Simple actions creator without string constants', bgColor: '#8c64ec' },
+    { title: 'React Notification', slug: 'react-notify-me', desc: 'React component for notifications', bgColor: '#5ff1dd' },
+    { title: 'Quadratic Photo Mosaic', slug: 'quadratic-photomosaic', desc: 'Like FB photo mosaic', bgColor: '#ffeb5b' },
+  ]
+
 .title Projects
 .content
   .project-cards
-    for item in [1, 2, 3, 4, 5, 6]
+    for item in items
       .project-card-container
-        include card/index
+        a.project-card(href="https://github.com/grammka/#{item.slug}" target="_blank")
+          .project-card__photo(style="background-image: url(./images/projects/#{item.slug}.png); background-color: #{item.bgColor}")
+          .project-card__content
+            .project-card__title #{item.title}
+            .project-card__desc #{item.desc}
