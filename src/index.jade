@@ -4,6 +4,13 @@ html
     title Pavel Ivanov
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+
+    meta(property="og:url" content="http://pavelivanov.info/")
+    meta(property="og:type" content="website")
+    meta(property="og:title" content="Pavel Ivanov")
+    meta(property="og:description" content="I’m a front-end developer. I create complex web applications.")
+    meta(property="og:image" content="http://pavelivanov.info/images/avatar.jpg")
+
     link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
     link(rel="icon" href="favicon.ico" type="image/x-icon")
     link(href="style.css" rel="stylesheet")
@@ -11,44 +18,10 @@ html
   body
 
     include partials/hero/index
+    include partials/content/index
+    include partials/footer/index
 
-    .center
-      .title Skills
-      .content
-        .tags-container
-          .tags
-            .tag.html HTML
-            .tag.html JADE
-        .tags-container
-          .tags
-            .tag.css CSS
-            .tag.css SASS
-            .tag.css LESS
-            .tag.css Stylus
-        .tags-container
-          .tags
-            .tag.js JavaScript
-            .tag.js NodeJS
-            .tag.js React
-            .tag.js Redux
-            .tag.js Angular 1.4
-            .tag.js Webpack
-            .tag.js Gulp
-        .tags-container
-          .tags
-            .tag WebStorm
-            .tag Photoshop
-            .tag Sketch
-
-      .title Experience
-      .content.
-        I have 6+ years experience in creating complex single-page applications as well as general website front-end.
-        I know full web technology stack build process and how to make web apps faster.
-        I have a solid experience in web design, which means that I can successfully handle projects that require professionals
-        from two different fields - design and programming.
-
-      include partials/projects/index
-
+    #fb-root
 
     script.
       document.addEventListener('DOMContentLoaded', function () {
@@ -61,3 +34,14 @@ html
       for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})
       (document, window.mixpanel || []);
       mixpanel.init("e0099fb8c48ab3c010f63e6e0ea61073");
+
+    // Load Facebook SDK for JavaScript
+    script.
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1179051052162768";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));

@@ -1,13 +1,13 @@
 @import "./styl"
 
 @import "partials/hero"
-@import "partials/projects"
+@import "partials/content"
+@import "partials/footer"
 
 
 .center
   max-width: 800px
   margin 0 auto
-  padding 50px 15px 100px
 
 .title
   margin 50px 0 22px
@@ -16,54 +16,7 @@
   &:first-child
     margin-top: 0
 
-.content
-  line-height: 24px
-  font-size: 16px
-
-
-.tags-container
-  margin-top: 10px
-  &:first-child
-    margin-top: 0
-
-.tags
-  margin: -10px 0 0 -10px
-  font-size: 0
-
-.tag
-  min-width: 60px
-  line-height: 32px
-  background-color: #d2ddde
-  padding 0 12px
-  margin: 10px 0 0 10px
-  cursor: default
-  font-size: 14px
-  text-align: center
-  font-weight: 600
-  color #607273
-  border-radius 3px
-  no-select()
-  display-inline-block()
-  &.html
-    background-color: #ff6962
-    color #fff
-  &.css
-    background-color: #9671ce
-    color #fff
-  &.js
-    background-color: #ffd715
-    color #6b4906
-
-
-.name
-  font-size: 30px
-
-.lifestyle
-  font-size: 20px
-
 
 @media (max-width: 500px)
-  .center
-    padding 30px 15px 50px
   .title
     margin 25px 0 15px
