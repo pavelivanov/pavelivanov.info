@@ -25,18 +25,20 @@ $name-color     = #fff
 .in-dev
   width: 160px
   line-height: 24px
-  background-color: #fb1594
+  background-color: #ffe000
   border-top: 1px solid #6948b7
   padding 0 6px
   margin 0 auto
   z-index: 10
+  cursor: default
   text-transform: uppercase
   font-family: "Noto Sans"
   font-weight: 600
   font-size: 11px
-  color #4e022c
+  color #000
   text-shadow: none
   border-radius bottom 6px
+
 
 
 .about
@@ -72,22 +74,11 @@ $name-color     = #fff
   position: relative
   z-index: 10
   display-inline-block()
-  &:after
-    content ''
-    size 100%
-    display: block
-    background-color: rgba(#000, 0.3)
-    absolute bottom 0 left 0
-    z-index: -1
-    border-radius 3px
-    transition all 0.08s linear
   &:first-child
     margin-left: 0
   &:hover
-    &:after
-    	bottom -2px
     .button
-      transform scale(1.03)
+      box-shadow rgba(#000, 0.12) 0 0 0 3px
 
 .button
   min-width: 60px
