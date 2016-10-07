@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "html": "jade ./src -o ./build -P -w",
-    "stylus": "stylus ./src/style.styl -o ./build/style.css -w",
+    "css": "stylus ./src/style.styl -o ./build/style.css -w",
     "build": "cross-env DEBUG=app:* NODE_ENV=development CONFIG=development node ./bin/compile"
   },
   "dependencies": {},
