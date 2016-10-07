@@ -2,13 +2,10 @@
   "name": "pavelivanov.info",
   "version": "1.0.0",
   "scripts": {
-    "clean": "rimraf build",
     "html": "jade ./src -o ./build -P -w",
     "stylus": "stylus ./src/style.styl -o ./build/style.css -w",
-    "build": "npm run clean && cross-env DEBUG=app:* NODE_ENV=development CONFIG=development node ./bin/compile"
+    "build": "cross-env DEBUG=app:* NODE_ENV=development CONFIG=development node ./bin/compile"
   },
   "dependencies": {},
-  "devDependencies": {
-    "rimraf": "^2.5.4"
-  }
+  "devDependencies": {}
 }
