@@ -11,7 +11,7 @@
   .project-cards
     for item in items
       .project-card-container
-        a.project-card(href="https://github.com/grammka/#{item.slug}" target="_blank")
+        a.project-card(href="https://github.com/pavelivanov/#{item.slug}" target="_blank")
           .project-card__photo(style="background-image: url(./images/projects/#{item.slug}.#{item.logoExt || 'png'}); #{item.logoSize ? ('background-size: ' + item.logoSize) : ''}")
           .project-card__content
             .project-card__title #{item.title}
