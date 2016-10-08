@@ -2,9 +2,9 @@
   "name": "pavelivanov.info",
   "version": "1.0.0",
   "scripts": {
-    "html": "jade ./src -o ./build -P -w",
+    "html": "jade ./src/index.jade -o ./build -P -w",
     "css": "stylus ./src/style.styl -o ./build/style.css -w",
-    "build": "cross-env DEBUG=app:* NODE_ENV=development CONFIG=development node ./bin/compile"
+    "build": "jade ./src/index.jade -o ./build -P && stylus ./src/style.styl -o ./build/style.css"
   },
   "dependencies": {},
   "devDependencies": {}
