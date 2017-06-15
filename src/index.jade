@@ -8,7 +8,7 @@ html
     meta(property="og:url" content="http://pavelivanov.info/")
     meta(property="og:type" content="website")
     meta(property="og:title" content="Pavel Ivanov")
-    meta(property="og:description" content="Front-end developer. I create complex web applications. I solve problems visually, and create various things for the web. I also know how to design.")
+    meta(property="og:description" content="Front-end developer specializing in modular design systems & complex architecture. Travelling over the world.")
     meta(property="og:image" content="http://pavelivanov.info/images/avatar.jpg")
 
     link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
@@ -17,9 +17,10 @@ html
 
   body
 
-    include partials/hero/index
-    include partials/content/index
-    include partials/footer/index
+    .center
+      include partials/hero/index
+      include partials/projects/index
+      include partials/footer/index
 
     #fb-root
 

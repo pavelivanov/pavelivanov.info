@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "scripts": {
     "html": "jade ./src/index.jade -o ./build -P -w",
-    "css": "stylus ./src/style.styl -o ./build/style.css -w",
-    "build": "jade ./src/index.jade -o ./build -P && stylus ./src/style.styl -o ./build/style.css"
+    "css": "stylus ./src/style.styl -o ./build/style.css -u nib -w",
+    "build": "jade ./src/index.jade -o ./build -P && stylus ./src/style.styl -o ./build/style.css -u nib"
   },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "jade": "^1.11.0",
+    "nib": "^1.1.2",
+    "stylus": "^0.54.5"
+  }
 }

@@ -44,13 +44,11 @@
     },
   ]
 
-.info-title Projects
-.info-content
-  .project-cards
-    for item in items
-      .project-card-container
-        a.project-card(href="#{item.url}" target="_blank")
-          .project-card__photo(style="background-image: url(./images/projects/#{item.slug}.#{item.logoExt || 'png'}); #{item.logoSize ? ('background-size: ' + item.logoSize) : ''}")
-          .project-card__content
-            .project-card__title #{item.title}
-            .project-card__desc #{item.desc}
+.projects
+  for item in items
+    .project-container
+      a.project(href="#{item.url}" target="_blank")
+        .project__preview(style="background-image: url(./images/projects/#{item.slug}.#{item.logoExt || 'png'}); #{item.logoSize ? ('background-size: ' + item.logoSize) : ''}")
+        .project__content
+          .project__title #{item.title}
+          .project__desc #{item.desc}
