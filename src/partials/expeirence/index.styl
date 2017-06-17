@@ -10,7 +10,7 @@
 .work__company
   font-weight: 600
   font-size: 18px
-  &.with-sub-info
+  .with-sub-info &
     position: relative
 
 .work__sub-info
@@ -39,10 +39,11 @@
 +media-desktop()
 
   .work__header
-    padding-bottom: 20px
     display: flex
     justify-content space-between
     align-items center
+    .with-sub-info &
+      padding-bottom: 20px
 
   .work__sub-info
     bottom: -20px
@@ -63,8 +64,8 @@
 
   .work__company
     font-size: 26px
-    &.with-sub-info
-      padding-bottom: 20px
+    .with-sub-info &
+      padding-bottom: 16px
 
   .work__sub-info
     bottom: 0

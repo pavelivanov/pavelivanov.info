@@ -124,9 +124,9 @@
 .experience
   .title Experience
   for item in items
-    .work
+    .work(class=item.subInfo ? 'with-sub-info' : '')
       .work__header
-        .work__company(class=item.subInfo ? 'with-sub-info' : '') #{item.company}
+        .work__company #{item.company}
           if item.subInfo
             .work__sub-info !{item.subInfo}
         if item.position
