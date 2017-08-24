@@ -2,7 +2,7 @@
   items = [
     {
       company: 'Scentbird',
-      subInfo: 'scentbird.com',
+      site: 'scentbird.com',
       position: 'Lead Frontend Developer',
       dates: 'Nov 2016 - present',
       responsibilities: [
@@ -11,7 +11,7 @@
     },
     {
       company: 'TVEVT',
-      subInfo: 'tvevt.com',
+      site: 'tvevt.com',
       position: 'Front­End Developer',
       dates: 'Feb 2016 - Nov 2016',
       responsibilities: [
@@ -23,6 +23,7 @@
     },
     {
       company: 'HackPack',
+      site: 'hackpack.press',
       subInfo: 'Startup. Journalism over the World',
       position: 'Front­End Developer, Web­Designer, Co­Founder',
       dates: 'Feb 2015 –  Dec 2015',
@@ -124,11 +125,15 @@
 .experience
   .title Experience
   for item in items
-    .work(class=item.subInfo ? 'with-sub-info' : '')
+    .work(class=item.subInfo || item.site ? 'with-sub-info' : '')
       .work__header
         .work__company #{item.company}
-          if item.subInfo
-            .work__sub-info !{item.subInfo}
+          if item.subInfo || item.site
+            .work__sub-info
+              if item.site
+                a(href="#{item.site}" target="_blank") #{item.site}
+              if item.subInfo
+                span !{item.subInfo}
         if item.position
           .work__mdash &mdash;
           .work__position #{item.position}

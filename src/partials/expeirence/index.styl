@@ -10,6 +10,7 @@
 .work__company
   font-weight: 600
   font-size: 18px
+
   .with-sub-info &
     position: relative
 
@@ -18,8 +19,19 @@
   left: 0
   font-weight: normal
   white-space nowrap
-  font-size: 14px
-  color: #a5acb9
+  font-size: 0
+
+  span,
+  a
+    margin-right: 15px
+    display-inline-block()
+    text-decoration: none;
+    font-size: 14px
+    color: #a5acb9
+
+  a
+    &:hover
+      text-decoration: underline;
 
 .work__mdash
   padding: 0 8px
