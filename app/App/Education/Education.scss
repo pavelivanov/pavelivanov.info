@@ -1,0 +1,16 @@
+.item {
+  margin-top: 30px;
+  font-size: 18px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.title {
+  font-weight: 300;
+}
+
+.value {
+  margin-left: 12px;
+}

@@ -2,14 +2,39 @@
   "name": "pavelivanov.info",
   "version": "1.0.0",
   "scripts": {
-    "html": "jade ./src/index.jade -o ./build -P -w",
-    "css": "stylus ./src/style.styl -o ./build/style.css -u nib -w",
-    "build": "jade ./src/index.jade -o ./build -P && stylus ./src/style.styl -o ./build/style.css -u nib"
+    "dev": "cross-env NODE_ENV=development node ./bin/server",
+    "build": "cross-env NODE_ENV=production node ./bin/compile"
   },
-  "dependencies": {},
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
   "devDependencies": {
-    "jade": "^1.11.0",
-    "nib": "^1.1.2",
-    "stylus": "^0.54.5"
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "@babel/register": "^7.9.0",
+    "@types/node-sass": "^4.11.0",
+    "@types/react": "^16.9.34",
+    "autoprefixer": "^9.7.6",
+    "babel-loader": "^8.1.0",
+    "chalk": "^4.0.0",
+    "core-js": "^3.6.5",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.5.2",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.4",
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0",
+    "webpack-dev-middleware": "^3.7.2"
   }
 }

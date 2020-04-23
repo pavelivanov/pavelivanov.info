@@ -1,0 +1,41 @@
+.hero {
+
+}
+
+.header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 64px 0;
+}
+
+.fullName {
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+.role {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.nav {
+  display: flex;
+  padding-top: 6px;
+}
+
+.navItem {
+  margin-left: 32px;
+  cursor: pointer;
+  line-height: 28px;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 20px;
+  color: #000;
+  transition: color 0.23s ease;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}

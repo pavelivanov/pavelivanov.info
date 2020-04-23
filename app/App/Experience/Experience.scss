@@ -1,0 +1,56 @@
+.item {
+  margin-top: 40px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.dates {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.company {
+  font-size: 20px;
+}
+
+.subInfo {
+  margin-left: 12px;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.responsibilities {
+  padding: 24px 32px;
+  margin-top: 18px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0 4px 20px;
+}
+
+.responsibility {
+  position: relative;
+  padding-left: 16px;
+  margin-top: 16px;
+  font-weight: 300;
+  line-height: 26px;
+  font-size: 18px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 0;
+    display: block;
+    width: 3px;
+    height: 3px;
+    background-color: #000;
+    border-radius: 50%;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
