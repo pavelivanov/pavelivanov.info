@@ -1,14 +1,12 @@
 import path from 'path'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 import webpackConfig from './default'
 
 
-webpackConfig.target = 'web'
 webpackConfig.devtool = 'cheap-module-source-map'
 
 webpackConfig.entry = {
-  client: path.resolve('app'),
+  client: path.resolve('app/dev'),
 }
 
 webpackConfig.output = {
@@ -24,14 +22,6 @@ webpackConfig.devServer = {
   noInfo: true,
   lazy: false,
 }
-
-webpackConfig.plugins.push(
-  new HtmlWebpackPlugin({
-    filename: 'index.html',
-    template: path.resolve('app/index.html'),
-    inject: 'body',
-  }),
-)
 
 
 export default webpackConfig

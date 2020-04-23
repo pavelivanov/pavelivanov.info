@@ -1,4 +1,5 @@
-import webpack from 'webpack'
+import path from 'path'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 import rulesMap from './rules'
 
@@ -10,6 +11,7 @@ const rules = Object.keys(rulesMap)
 
 const webpackConfig = {
   mode: process.env.NODE_ENV,
+  target: 'web',
   module: {
     rules,
   },
@@ -20,13 +22,12 @@ const webpackConfig = {
     modules: [ 'node_modules' ],
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: path.resolve('app/index.html'),
+      inject: false,
+      minify: false,
     }),
-    new webpack.ContextReplacementPlugin(
-      /moment[/\\]locale$/,
-      /en-gb/
-    ),
   ],
 }
 

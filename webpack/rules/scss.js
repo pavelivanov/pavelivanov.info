@@ -3,10 +3,9 @@ import autoprefixer from 'autoprefixer'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 
-const isDev           = process.env.NODE_ENV === 'development'
-const onlyLocals      = process.env.WEBPACK === 'build.server'
-const localIdentName  = isDev ? '[local]__[hash:base64:3]' : '[hash:base64:6]'
-const loaders         = []
+const isDev = process.env.NODE_ENV === 'development'
+const localIdentName = isDev ? '[local]__[hash:base64:3]' : '[hash:base64:6]'
+const loaders = []
 
 if (isDev) {
   loaders.push({
@@ -21,8 +20,8 @@ loaders.push(
   {
     loader: 'css-loader',
     options: {
-      sourceMap: !isDev,
-      onlyLocals: onlyLocals,
+      sourceMap: false,
+      onlyLocals: false,
       importLoaders: 2,
       modules: {
         context: __dirname,
