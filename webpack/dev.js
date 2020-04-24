@@ -1,4 +1,5 @@
 import path from 'path'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 import webpackConfig from './default'
 
@@ -22,6 +23,15 @@ webpackConfig.devServer = {
   noInfo: true,
   lazy: false,
 }
+
+webpackConfig.plugins.push(
+  new HtmlWebpackPlugin({
+    filename: 'index.html',
+    template: path.resolve('app/index.html'),
+    inject: 'body',
+    minify: false,
+  }),
+)
 
 
 export default webpackConfig

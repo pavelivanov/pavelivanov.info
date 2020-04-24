@@ -10,11 +10,8 @@ type SectionProps = {
 
 const Section: React.FunctionComponent<SectionProps> = ({ num, title, children }) => (
   <div className={s.section}>
-    <div className={s.headline}>
-      <div className={s.num}>{num}</div>
-      <div className={s.title}>{title}</div>
-    </div>
-    <div className={s.content}>
+    <div className={s.title}>{title}</div>
+    <div>
       {children}
     </div>
   </div>

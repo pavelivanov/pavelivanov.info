@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import cx from 'classnames'
 
 import Section from '../../components/Section/Section'
@@ -31,33 +31,29 @@ const items = {
 
 const Skills = () => (
   <Section num="01" title="Skills">
-    <div className={s.content}>
-      <div className={s.contentItem}>
-        <div className={s.title}>Primary</div>
-        <div className={s.items}>
-          {
-            items.primary.map(({ title, level }) => (
-              <div key={title} className={cx(s.item, s.withExperience)}>
-                {title}
-                <div className={cx(s.experience, s[`level-${level}`])}>{level} / 5</div>
-              </div>
-            ))
-          }
-        </div>
+    <Fragment>
+      <div className={s.title}>Primary</div>
+      <div className={s.items}>
+        {
+          items.primary.map(({ title, level }) => (
+            <div key={title} className={cx(s.item, s.withExperience)}>
+              <span>{title}</span>
+              <div className={cx(s.experience, s[`level-${level}`])}>{level} / 5</div>
+            </div>
+          ))
+        }
       </div>
-      <div className={s.contentItem}>
-        <div className={s.title}>Secondary</div>
-        <div className={s.items}>
-          {
-            items.secondary.map(({ title }) => (
-              <div key={title} className={s.item}>
-                {title}
-              </div>
-            ))
-          }
-        </div>
+      <div className={s.title}>Secondary</div>
+      <div className={s.items}>
+        {
+          items.secondary.map(({ title }) => (
+            <div key={title} className={s.item}>
+              {title}
+            </div>
+          ))
+        }
       </div>
-    </div>
+    </Fragment>
   </Section>
 )
 

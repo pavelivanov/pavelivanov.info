@@ -1,5 +1,4 @@
 import path from 'path'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 import rulesMap from './rules'
 
@@ -21,14 +20,7 @@ const webpackConfig = {
   resolveLoader: {
     modules: [ 'node_modules' ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: path.resolve('app/index.html'),
-      inject: false,
-      minify: false,
-    }),
-  ],
+  plugins: [],
 }
 
 

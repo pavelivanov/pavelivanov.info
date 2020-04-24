@@ -1,6 +1,7 @@
 import path from 'path'
 import webpack from 'webpack'
 import TerserPlugin from 'terser-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
@@ -22,6 +23,12 @@ webpackConfig.output = {
 }
 
 webpackConfig.plugins.push(
+  new HtmlWebpackPlugin({
+    filename: 'index.html',
+    template: path.resolve('app/index.html'),
+    inject: false,
+    minify: true,
+  }),
   new MiniCssExtractPlugin({
     filename: '[name].css',
     chunkFilename: '[id].css',

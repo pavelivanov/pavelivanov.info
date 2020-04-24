@@ -13,8 +13,8 @@ const items = [
 const Education = () => (
   <Section num="03" title="Education">
     {
-      items.map(({ title, value }) => (
-        <div className={s.item}>
+      items.map(({ title, value }, index) => (
+        <div key={index} className={s.item}>
           <span className={s.title}>{title}</span>
           <span className={s.value}>{value}</span>
         </div>

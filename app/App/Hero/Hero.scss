@@ -1,41 +1,80 @@
-.hero {
-
-}
-
-.header {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  padding: 64px 0;
-}
-
 .fullName {
   font-weight: 700;
-  font-size: 32px;
   letter-spacing: 1px;
 }
 
 .role {
   font-weight: 300;
-  font-size: 18px;
 }
 
 .nav {
   display: flex;
-  padding-top: 6px;
 }
 
 .navItem {
-  margin-left: 32px;
   cursor: pointer;
-  line-height: 28px;
   text-decoration: none;
   font-weight: 300;
-  font-size: 20px;
   color: #000;
   transition: color 0.23s ease;
 
   &:first-child {
     margin-left: 0;
+  }
+}
+
+
+@include media-mobile {
+
+  .hero {
+    padding: vwx(30) 0 vwx(56);
+    text-align: center;
+  }
+
+  .fullName {
+    font-size: vwx(32);
+  }
+
+  .role {
+    font-size: vwx(18);
+  }
+
+  .nav {
+    justify-content: center;
+    margin-top: vwx(32);
+  }
+
+  .navItem {
+    margin-left: vwx(32);
+    line-height: vwx(28);
+    font-size: vwx(20);
+  }
+}
+
+@include media-except-mobile {
+
+  .hero {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding: 64px 0;
+  }
+
+  .fullName {
+    font-size: 32px;
+  }
+
+  .role {
+    font-size: 18px;
+  }
+
+  .nav {
+    padding-top: 6px;
+  }
+
+  .navItem {
+    margin-left: 32px;
+    line-height: 28px;
+    font-size: 20px;
   }
 }

@@ -7,8 +7,19 @@ body {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-.page {
-  max-width: 800px;
-  margin: 0 auto;
-  padding-bottom: 100px;
+
+@include media-mobile {
+
+  .page {
+    padding: 0 vwx(30) vwx(50);
+  }
+}
+
+@include media-except-mobile {
+
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 30px 100px;
+  }
 }

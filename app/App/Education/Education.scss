@@ -1,6 +1,4 @@
 .item {
-  margin-top: 30px;
-  font-size: 18px;
 
   &:first-child {
     margin-top: 0;
@@ -11,6 +9,27 @@
   font-weight: 300;
 }
 
-.value {
-  margin-left: 12px;
+
+@include media-mobile {
+
+  .item {
+    margin-top: vwx(32);
+    font-size: vwx(18);
+  }
+
+  .value {
+    margin-left: vwx(12);
+  }
+}
+
+@include media-except-mobile {
+
+  .item {
+    margin-top: 32px;
+    font-size: 18px;
+  }
+
+  .value {
+    margin-left: 12px;
+  }
 }
