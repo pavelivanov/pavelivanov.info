@@ -1,56 +1,45 @@
 import path from 'path'
-import autoprefixer from 'autoprefixer'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 
 const isDev = process.env.NODE_ENV === 'development'
-const localIdentName = isDev ? '[local]__[hash:base64:3]' : '[hash:base64:6]'
-const loaders = []
+const localIdentName = isDev ? '[local]_[hash:base64:4]' : '[hash:base64:6]'
 
-if (isDev) {
-  loaders.push({
-    loader: 'style-loader',
-  })
-}
-else {
-  loaders.push(MiniCssExtractPlugin.loader)
-}
+const loaders = [{
+  loader: MiniCssExtractPlugin.loader,
+  options: {
+    publicPath: process.env.ASSETS_PATH,
+  },
+}]
 
 loaders.push(
   {
     loader: 'css-loader',
     options: {
-      sourceMap: false,
-      onlyLocals: false,
-      importLoaders: 2,
       modules: {
-        context: __dirname,
         localIdentName,
+        exportOnlyLocals: false,
       },
+      importLoaders: 2,
+      sourceMap: true,
     },
   },
   {
     loader: 'postcss-loader',
     options: {
-      plugins: () => [
-        autoprefixer([
-          'last 2 versions',
-          'Safari >= 9',
-          'IE >= 11',
-          'iOS >= 9',
-        ]),
-      ],
+      sourceMap: true,
     },
   },
   {
     loader: 'sass-loader',
     options: {
-      prependData: '@import "./scss/index";',
+      additionalData: '@import "scss/index";',
       sassOptions: {
         includePaths: [
-          path.resolve('app'),
+          path.resolve('src'),
         ],
-      },      
+      },
+      sourceMap: true,
     },
   }
 )

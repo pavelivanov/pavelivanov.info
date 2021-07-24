@@ -1,4 +1,4 @@
-import path from 'path'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 import rulesMap from './rules'
 
@@ -20,7 +20,13 @@ const webpackConfig = {
   resolveLoader: {
     modules: [ 'node_modules' ],
   },
-  plugins: [],
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+      ignoreOrder: true,
+    }),
+  ],
 }
 
 

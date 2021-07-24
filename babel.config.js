@@ -4,10 +4,8 @@ const config = {
       '@babel/preset-env', {
         targets: {
           browsers: [
-            'last 2 versions',
-            'Safari >= 9',
-            'IE >= 11',
-            'iOS >= 9',
+            'last 2 major versions',
+            'not dead',
           ],
           node: 'current',
         },

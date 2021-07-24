@@ -14,7 +14,7 @@ const App = () => (
   <div className={s.page}>
     <Hero />
     <div>
-      {/* <About /> */}
+      <About />
       <Skills />
       <Projects />
       <Experience />

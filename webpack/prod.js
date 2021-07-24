@@ -3,7 +3,6 @@ import webpack from 'webpack'
 import TerserPlugin from 'terser-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin'
-import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 import webpackConfig from './default'
 
@@ -12,7 +11,7 @@ webpackConfig.target = 'node'
 webpackConfig.devtool = 'none'
 
 webpackConfig.entry = {
-  client: path.resolve('app/prod'),
+  client: path.resolve('src/prod'),
 }
 
 webpackConfig.output = {
@@ -25,14 +24,9 @@ webpackConfig.output = {
 webpackConfig.plugins.push(
   new HtmlWebpackPlugin({
     filename: 'index.html',
-    template: path.resolve('app/index.html'),
+    template: path.resolve('src/index.html'),
     inject: false,
     minify: true,
-  }),
-  new MiniCssExtractPlugin({
-    filename: '[name].css',
-    chunkFilename: '[id].css',
-    ignoreOrder: true,
   }),
   new webpack.optimize.LimitChunkCountPlugin({
     maxChunks: 1,
