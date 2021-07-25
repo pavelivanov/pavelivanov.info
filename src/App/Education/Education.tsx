@@ -6,7 +6,7 @@ import s from './Education.scss'
 
 
 const items = [
-  { title: 'University', value: 'HSE - Web design' },
+  { title: 'University', value: 'HSE - Web design, 2009 - 2014' },
   { title: 'Languages', value: 'English B1, Russian' },
 ]
 

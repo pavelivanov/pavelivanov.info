@@ -1,69 +1,69 @@
-$media-mobile-end                         : 568px;
-$media-tablet-portrait-start              : $media-mobile-end + 1px;
-$media-tablet-portrait-end                : 768px;
-$media-tablet-landscape-start             : $media-tablet-portrait-end + 1px;
-$media-tablet-landscape-end               : 1024px;
-$media-desktop-start                      : $media-tablet-landscape-end + 1px;
+$mobile-end                         : 568px;
+$tablet-portrait-start              : $mobile-end + 1px;
+$tablet-portrait-end                : 768px;
+$tablet-landscape-start             : $tablet-portrait-end + 1px;
+$tablet-landscape-end               : 1024px;
+$desktop-start                      : $tablet-landscape-end + 1px;
 
-$media-desktop-rule                       : '(min-width: ' + $media-desktop-start + ')';
-$media-tablet-landscape-rule              : '(min-width: ' + $media-tablet-landscape-start + ') and (max-width: ' + $media-tablet-landscape-end + ')';
-$media-tablet-rule                        : '(min-width: ' + $media-tablet-portrait-start + ') and (max-width: ' + $media-tablet-landscape-end ')';
-$media-tablet-portrait-rule               : '(min-width: ' + $media-tablet-portrait-start + ') and (max-width: ' + $media-tablet-portrait-end + ')';
-$media-mobile-rule                        : '(max-width: ' + $media-mobile-end + ')';
-$media-tablet-landscape-and-higher-rule   : '(min-width: ' + $media-tablet-landscape-start + ')';
-$media-tablet-landscape-and-lower-rule    : '(max-width: ' + $media-tablet-landscape-end + ')';
-$media-except-mobile-rule                 : '(min-width: ' + $media-tablet-portrait-start + ')';
-$media-except-desktop-rule                : '(max-width: ' + $media-tablet-landscape-end +  ')';
-$media-tablet-portrait-and-higher-rule    : '(min-width: ' + $media-tablet-portrait-start +  ')';
-$media-tablet-portrait-and-lower-rule     : '(max-width: ' + $media-tablet-portrait-end +  ')';
+$desktop-rule                       : '(min-width: ' + $desktop-start + ')';
+$tablet-landscape-rule              : '(min-width: ' + $tablet-landscape-start + ') and (max-width: ' + $tablet-landscape-end + ')';
+$tablet-rule                        : '(min-width: ' + $tablet-portrait-start + ') and (max-width: ' + $tablet-landscape-end ')';
+$tablet-portrait-rule               : '(min-width: ' + $tablet-portrait-start + ') and (max-width: ' + $tablet-portrait-end + ')';
+$mobile-rule                        : '(max-width: ' + $mobile-end + ')';
+$tablet-landscape-and-higher-rule   : '(min-width: ' + $tablet-landscape-start + ')';
+$tablet-landscape-and-lower-rule    : '(max-width: ' + $tablet-landscape-end + ')';
+$except-mobile-rule                 : '(min-width: ' + $tablet-portrait-start + ')';
+$except-desktop-rule                : '(max-width: ' + $tablet-landscape-end +  ')';
+$tablet-portrait-and-higher-rule    : '(min-width: ' + $tablet-portrait-start +  ')';
+$tablet-portrait-and-lower-rule     : '(max-width: ' + $tablet-portrait-end +  ')';
 
 
-@mixin media-desktop {
-  @media #{$media-desktop-rule} {
+@mixin desktop {
+  @media #{$desktop-rule} {
     @content;
   }
 }
 
-@mixin media-tablet-landscape {
-  @media #{$media-tablet-landscape-rule} {
+@mixin tablet-landscape {
+  @media #{$tablet-landscape-rule} {
     @content;
   }
 }
 
-@mixin media-tablet {
-  @media #{$media-tablet-rule} {
+@mixin tablet {
+  @media #{$tablet-rule} {
     @content;
   }
 }
 
-@mixin media-tablet-portrait {
-  @media #{$media-tablet-portrait-rule} {
+@mixin tablet-portrait {
+  @media #{$tablet-portrait-rule} {
     @content;
   }
 }
 
-@mixin media-mobile {
-  @media #{$media-mobile-rule} {
+@mixin mobile {
+  @media screen and #{$mobile-rule} {
     @content;
   }
 }
 
 // * and higher
 
-@mixin media-tablet-landscape-and-higher {
-  @media #{$media-tablet-landscape-and-higher-rule} {
+@mixin tablet-landscape-and-higher {
+  @media #{$tablet-landscape-and-higher-rule} {
     @content;
   }
 }
 
-@mixin media-tablet-portrait-and-higher {
-  @media #{$media-tablet-portrait-and-higher-rule} {
+@mixin tablet-portrait-and-higher {
+  @media #{$tablet-portrait-and-higher-rule} {
     @content;
   }
 }
 
-@mixin media-except-mobile {
-  @media #{$media-except-mobile-rule} {
+@mixin except-mobile {
+  @media #{$except-mobile-rule} {
     @content;
   }
 }
@@ -71,20 +71,20 @@ $media-tablet-portrait-and-lower-rule     : '(max-width: ' + $media-tablet-portr
 
 // * and lower
 
-@mixin media-except-desktop {
-  @media #{$media-except-desktop-rule} {
+@mixin except-desktop {
+  @media #{$except-desktop-rule} {
     @content;
   }
 }
 
-@mixin media-tablet-portrait-and-lower {
-  @media #{$media-tablet-portrait-and-lower-rule} {
+@mixin tablet-portrait-and-lower {
+  @media #{$tablet-portrait-and-lower-rule} {
     @content;
   }
 }
 
-@mixin media-tablet-landscape-and-lower {
-  @media #{$media-tablet-landscape-and-lower-rule} {
+@mixin tablet-landscape-and-lower {
+  @media #{$tablet-landscape-and-lower-rule} {
     @content;
   }
 }
@@ -92,12 +92,12 @@ $media-tablet-portrait-and-lower-rule     : '(max-width: ' + $media-tablet-portr
 
 // retina
 
-@mixin media-retina {
+@mixin retina {
   $retina-variable: 'only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi)';
   @media #{$retina-variable} { @content; }
 }
 
-@mixin media-retina-3x {
+@mixin retina-3x {
   $retina-variable: 'only screen and (-webkit-min-device-pixel-ratio: 2.5), only screen and (min-resolution: 288dpi)';
   @media #{$retina-variable} { @content; }
 }

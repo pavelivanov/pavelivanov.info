@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Pavel Ivanov</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Pavel Ivanov | Front End Developer</title>
+  <meta charset="utf-8">
+  <meta name="fragment" content="!">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+  <meta name="title" content="Pavel Ivanov | Front End Developer" />
+  <meta name="description" content="Web designer by profession, frontend developer by vocation. TypeScript - one love." />
+  <meta property="og:url" content="https://pavelivanov.info" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Pavel Ivanov | Front End Developer" />
+  <meta property="og:description" content="Web designer by profession, frontend developer by vocation. TypeScript - one love." />
+<!--  <meta property="og:image" content="https://cdn.scentbird.com/facebook.png" />-->
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%220%22 fill=%22%23242424%22></rect><path fill=%22%23fff%22 d=%22M41.47 57.14L32.73 57.14L32.73 74.17L22.77 74.17L22.77 25.83L41.63 25.83Q47.08 25.83 51.21 27.82Q55.35 29.81 57.57 33.48Q59.79 37.15 59.79 41.83L59.79 41.83Q59.79 48.94 54.93 53.04Q50.07 57.14 41.47 57.14L41.47 57.14ZM32.73 33.90L32.73 49.07L41.63 49.07Q45.58 49.07 47.66 47.21Q49.73 45.35 49.73 41.90L49.73 41.90Q49.73 38.35 47.64 36.15Q45.55 33.96 41.87 33.90L41.87 33.90L32.73 33.90ZM77.23 25.83L77.23 74.17L67.27 74.17L67.27 25.83L77.23 25.83Z%22></path></svg>" />
 </head>
 <body>
   <div id="root"></div>
+  <script>
+    (function () {
+      setTimeout(function () {
+        var menu = document.getElementById('sidebar-menu');
+        var fixed = false;
+
+        window.addEventListener('scroll', function () {
+          var scrollTop = document.documentElement.scrollTop;
+
+          if (scrollTop > 88 && !fixed) {
+            fixed = true;
+            menu.classList.add('fixed');
+          }
+          else if (scrollTop <= 0 && fixed) {
+            fixed = false;
+            menu.classList.remove('fixed');
+          }
+        });
+      }, 1000);
+    })();
+  </script>
 </body>
 </html>

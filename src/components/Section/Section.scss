@@ -11,7 +11,7 @@
 }
 
 
-@include media-mobile {
+@include mobile {
 
   .section {
     margin-top: vwx(56);
@@ -23,7 +23,7 @@
   }
 }
 
-@include media-except-mobile {
+@include except-mobile {
 
   .section {
     margin-top: 56px;

@@ -8,18 +8,36 @@ body {
 }
 
 
-@include media-mobile {
+@include mobile {
 
   .page {
     padding: 0 vwx(30) vwx(50);
   }
 }
 
-@include media-except-mobile {
+@include except-mobile {
 
   .page {
+    position: relative;
     max-width: 800px;
     margin: 0 auto;
     padding: 0 30px 100px;
+  }
+}
+
+@media print {
+
+  @page {
+    size: 330mm 427mm;
+    margin: 14mm;
+  }
+
+  .page {
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    height: 100vh;
   }
 }

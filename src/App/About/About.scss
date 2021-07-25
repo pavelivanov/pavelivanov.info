@@ -1,0 +1,35 @@
+.about {
+
+}
+
+.item {
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+
+@include mobile {
+
+  .about {
+    font-size: vwx(16);
+    line-height: vwx(22);
+  }
+
+  .item {
+    margin-top: vwx(12);
+  }
+}
+
+@include except-mobile {
+
+  .about {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .item {
+    margin-top: 12px;
+  }
+}

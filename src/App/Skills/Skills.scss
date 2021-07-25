@@ -1,5 +1,5 @@
 .title {
-  
+
   &:first-child {
     margin-top: 0;
   }
@@ -8,16 +8,25 @@
 .item {
   position: relative;
   cursor: default;
-  font-weight: 300;
-  background: #fff;
+  background-color: #fff;
+}
+
+.title {
+  font-weight: 700;
 }
 
 .experience {
+  white-space: nowrap;
   color: #999;
 }
 
 
-@include media-mobile {
+@include mobile {
+
+  .grid {
+    display: grid;
+    grid-gap: vwx(48);
+  }
 
   .title {
     margin-top: vwx(40);
@@ -43,38 +52,40 @@
   }
 }
 
-@include media-except-mobile {
+@include except-mobile {
+
+  .grid {
+    display: grid;
+    grid-gap: 48px 64px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   .title {
-    margin-top: 40px;
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 17px;
   }
 
   .items {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin: -10px;
+
   }
 
   .item {
-    margin: 10px;
-    padding: 10px 16px;
-    font-weight: 300;
-    font-size: 18px;
-    border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.09) 0 4px 20px;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    font-size: 16px;
+
+    &:first-child {
+      border-top: 0;
+    }
 
     &.withExperience {
-      padding-right: 52px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
     }
   }
 
   .experience {
-    position: absolute;
-    top: 16px;
-    right: 14px;
     font-size: 12px;
   }
 }

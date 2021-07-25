@@ -10,10 +10,10 @@
 }
 
 
-@include media-mobile {
+@include mobile {
 
   .item {
-    margin-top: vwx(32);
+    margin-top: vwx(12);
     font-size: vwx(18);
   }
 
@@ -22,10 +22,10 @@
   }
 }
 
-@include media-except-mobile {
+@include except-mobile {
 
   .item {
-    margin-top: 32px;
+    margin-top: 12px;
     font-size: 18px;
   }
 

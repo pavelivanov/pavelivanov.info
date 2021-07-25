@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import cx from 'classnames'
 
 import Section from '../../components/Section/Section'
@@ -8,52 +8,72 @@ import s from './Skills.scss'
 
 const items = {
   primary: [
-    { title: 'JavaScript', level: 5 },
-    { title: 'TypeScript', level: 4 },
-    { title: 'NodeJS', level: 3 },
-    { title: 'React', level: 5 },
-    { title: 'Redux', level: 5 },
-    { title: 'Webpack', level: 4 },
-    { title: 'Babel', level: 4 },
-    { title: 'Docker', level: 3 },
-    { title: 'Redis', level: 3 },
-    { title: 'Rabbit', level: 3 },
-    { title: 'HTML, CSS, SCSS', level: 5 },
+    { title: 'HTML, CSS, SASS', level: 5 },
+    { title: 'JS, TS', level: 5 },
+    { title: 'React, Preact', level: 5 },
+    { title: 'Redux, Apollo', level: 5 },
+    { title: 'REST, GraphQL, gRPC', level: 4 },
+    { title: 'Webpack, Babel', level: 5 },
+    { title: 'E2E (Cypress, Puppeteer, Playwright)', level: 4 },
+    { title: 'Unit (Jest)', level: 4 },
   ],
   secondary: [
-    { title: 'WebStorm' },
-    { title: 'VSCode' },
-    { title: 'Sketch' },
-    { title: 'Figma' },
-    { title: 'Jira' },
+    { title: 'Vue, Svelte' },
+    { title: 'Snowpack, Rollup' },
+    { title: 'NodeJS' },
+    { title: 'Docker' },
+    { title: 'Redis' },
+    { title: 'Rabbit' },
+    { title: 'Styled Components' },
+    { title: 'TailwindCSS' },
+  ],
+  crypto: [
+    { title: 'Solidity' },
+    { title: 'Web3, Ethers' },
+    { title: 'Wallet connecting' },
+    { title: 'MetaMask API' },
+    { title: 'Truffle, Hardhat' },
+    { title: 'Infura' },
+  ],
+  other: [
+    { title: 'WebStorm, VSCode' },
+    { title: 'Sketch, Figma' },
+    { title: 'GitHub, GitLab' },
+    { title: 'JIRA' },
+    { title: 'Storybook, Cosmos' },
+    { title: 'AWS (lambda, workers, S3)' },
+    { title: 'GTM, Snowplow, Mixpanel' },
   ],
 }
 
+const Items = ({ title, items }) => (
+  <div>
+    <div className={s.title}>{title}</div>
+    <div className={s.items}>
+      {
+        items.map(({ title, level }) => (
+          <div key={title} className={cx(s.item, { [s.withExperience]: level })}>
+            <span>{title}</span>
+            {
+              Boolean(level) && (
+                <div className={cx(s.experience, s[`level-${level}`])}>{level} / 5</div>
+              )
+            }
+          </div>
+        ))
+      }
+    </div>
+  </div>
+)
+
 const Skills = () => (
   <Section num="01" title="Skills">
-    <Fragment>
-      <div className={s.title}>Primary</div>
-      <div className={s.items}>
-        {
-          items.primary.map(({ title, level }) => (
-            <div key={title} className={cx(s.item, s.withExperience)}>
-              <span>{title}</span>
-              <div className={cx(s.experience, s[`level-${level}`])}>{level} / 5</div>
-            </div>
-          ))
-        }
-      </div>
-      <div className={s.title}>Secondary</div>
-      <div className={s.items}>
-        {
-          items.secondary.map(({ title }) => (
-            <div key={title} className={s.item}>
-              {title}
-            </div>
-          ))
-        }
-      </div>
-    </Fragment>
+    <div className={s.grid}>
+      <Items title="Primary" items={items.primary} />
+      <Items title="Secondary" items={items.secondary} />
+      <Items title="Crypto" items={items.crypto} />
+      <Items title="Other" items={items.other} />
+    </div>
   </Section>
 )
 

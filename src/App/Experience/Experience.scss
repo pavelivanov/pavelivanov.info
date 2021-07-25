@@ -9,6 +9,10 @@
   font-weight: 300;
 }
 
+.company {
+  font-weight: 700;
+}
+
 .subInfo {
   font-weight: 300;
 }
@@ -19,7 +23,6 @@
 
 .responsibility {
   position: relative;
-  font-weight: 300;
 
   &::before {
     content: '';
@@ -38,77 +41,75 @@
 }
 
 
-@include media-mobile {
+@include mobile {
 
   .item {
     margin-top: vwx(40);
   }
-  
+
   .dates {
     margin-bottom: vwx(5);
     font-size: vwx(14);
   }
-  
+
   .company {
     font-size: vwx(20);
   }
-  
+
   .subInfo {
     margin-left: vwx(12);
     font-size: vwx(20);
   }
-  
+
   .responsibilities {
     margin-top: vwx(12);
   }
-  
+
   .responsibility {
     padding-left: vwx(16);
     margin-top: vwx(16);
     line-height: vwx(26);
     font-size: vwx(18);
-  
+
     &::before {
       top: vwx(11);
     }
   }
 }
 
-@include media-except-mobile {
+@include except-mobile {
 
   .item {
     margin-top: 40px;
   }
-  
+
   .dates {
     margin-bottom: 5px;
     font-size: 14px;
   }
-  
+
   .company {
     font-size: 20px;
   }
-  
+
   .subInfo {
     margin-left: 12px;
     font-size: 20px;
   }
-  
+
   .responsibilities {
-    padding: 24px 32px;
     margin-top: 18px;
-    border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.09) 0 4px 20px;
+    padding-left: 12px;
   }
-  
+
   .responsibility {
     padding-left: 16px;
-    margin-top: 16px;
+    margin-top: 8px;
     line-height: 26px;
     font-size: 18px;
-  
+
     &::before {
-      top: 11px;
+      top: 12px;
     }
   }
 }

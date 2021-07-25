@@ -7,17 +7,20 @@ import s from './Experience.scss'
 
 const items = [
   {
-    dates: 'Nov 2016 — present',
+    dates: 'Nov 2016 — Jul 2021',
     company: 'Scentbird',
     responsibilities: [
-      'Tech lead of 10 frontends',
-      'Performance',
-      'Babel plugins',
-      'Hight speed loading landings',
-      'Redaction',
-      'Formular',
-      'Borscht',
-      'Was working on internal tools - created couple of helpful resources: bot for Slack to notify about'
+      'Designed dynamic and browser compatible pages using React, TypeScript, Webpack, Babel, Rest / GraphQL Apollo.',
+      'Actively participated in the analysis of the initial problems and goals, conducted research and determined the requirements for solutions.',
+      'Covered code with Unit tests with Jest (testing-library) and E2E tests with Playwright.',
+      'Implemented and was engaged in support of WCAG 2.1.',
+      'Experienced in developing of Babel plugins.',
+      'Became a webpack setup wizard. Did big research in chunks splitting to improve assets loading experience.',
+      'Setup Docusaurus to write docs. Create high-quality technical design documentation considering the product requirements.',
+      'Built an established work process in the frontend team: the rotation of the team in tracking Sentry issues and fixing bugs, PRs review and deployment process.',
+      'Engaged in people development. Followed team annual performance review, set goals for the year. Mentored and helped the team to create deliverables in good quality.',
+      'Kept in close contact with the team. Participated in architectural problems and found solutions together.',
+      'Created a number of tools to simplify the work of different teams: e.g. Jira, Sentry and Slack integrations to be notified about new issues; simplify code review process; deployment reports; etc.',
     ],
   },
   {

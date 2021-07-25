@@ -1,6 +1,7 @@
 import React from 'react'
 
-import Hero from './Hero/Hero'
+import SidebarMenu from './SidebarMenu/SidebarMenu'
+import Header from './Header/Header'
 import About from './About/About'
 import Skills from './Skills/Skills'
 import Projects from './Projects/Projects'
@@ -12,10 +13,13 @@ import s from './App.scss'
 
 const App = () => (
   <div className={s.page}>
-    <Hero />
-    <div>
+    <SidebarMenu />
+    <div className={s.hero}>
+      <Header />
       <About />
       <Skills />
+    </div>
+    <div>
       <Projects />
       <Experience />
       <Education />
