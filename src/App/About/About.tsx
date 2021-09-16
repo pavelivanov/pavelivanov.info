@@ -4,10 +4,10 @@ import s from './About.scss'
 
 
 const items = [
-  'Web designer by profession, frontend developer by vocation. TypeScript - one love. I consider my design vision to be a great advantage, it allows me to bring the result of my professional activity to a higher level.',
-  'I have a lot of experience as a team leader. I know how to motivate people and set up a workflow. I can identify the strengths and weaknesses of a person and work out a scheme for his development. I am able to establish effective and comfortable interaction of the team for everyone. All my teammates have achieved high results. Their success is the best reward for me!',
-  'I am fond of mentoring (in general, I like to share knowledge), mentored 2 streams of students in HtmlAcademy, now I am participating in GetMentor.',
-  'Since 2017 plunged into the crypto world, took part and was a prize-winner of the BlockchainHack 2017, LAToken 2017, IcoLab 2017, ETHWaterloo 2017, ETHWaterloo 2019 hackathons. I\'m drowning for the offchain.',
+  'Since 2017 I have immersed myself into the crypto world. I have competed in multiple hackathons and was a prize-winner at BlockchainHack 2017, LAToken 2017, IcoLab 2017, ETHWaterloo 2017 and ETHWaterloo 2019. More recently I have become more interested specifically in DeFi applications, and applying my skills to this sector.',
+  'I have extensive experience as a team leader. I am a motivational leader who can build a strong positive culture, team spirit and ethics. I can identify strengths and weaknesses and use this to get the best out of people. My teammates have always achieved high results, their success is the best reward for me!',
+  'I like mentoring people and sharing my knowledge. I have mentored two streams of students in HtmlAcademy and I am now participating in GetMentor.',
+  'A web designer by education and frontend developer by profession, I have gained further skills and experience by working with many different types of people and developers. I consider my design vision to be a great advantage, and this allows me to bring the result of my and my team\'s professional activity to a higher level.',
 ]
 
 const About = () => (
