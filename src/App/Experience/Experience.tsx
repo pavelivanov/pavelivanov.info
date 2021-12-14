@@ -7,6 +7,10 @@ import s from './Experience.scss'
 
 const items = [
   {
+    dates: 'Jun 2021 — present',
+    company: 'Azuro',
+  },
+  {
     dates: 'Nov 2016 — Jul 2021',
     company: 'Scentbird',
     responsibilities: [
